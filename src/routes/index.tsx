@@ -121,7 +121,40 @@ function Index() {
 
         <DashboardMockup />
       </main>
+
+      <CTABlock />
     </div>
+  );
+}
+
+function CTABlock() {
+  return (
+    <section className="relative mx-auto max-w-7xl px-5 py-20 sm:px-8">
+      <div className="rounded-3xl border border-border bg-card/60 p-8 text-center shadow-glow-violet backdrop-blur sm:p-12">
+        <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
+          Давайте создадим AI-продукт
+        </h2>
+        <p className="mx-auto mt-3 max-w-lg text-muted-foreground">
+          Выберите удобный способ связи — обсудим задачу и запустим проект.
+        </p>
+        <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+          <a
+            href="https://t.me/alexneiro"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex h-13 min-h-12 items-center justify-center gap-2 rounded-full bg-gradient-ember px-6 text-sm font-semibold text-foreground shadow-glow-orange transition-transform hover:scale-[1.03]"
+          >
+            Написать в Telegram
+          </a>
+          <a
+            href="mailto:hello@alexneiro.ru"
+            className="inline-flex h-13 min-h-12 items-center justify-center gap-2 rounded-full border border-neon-violet/60 bg-neon-violet/10 px-6 text-sm font-semibold text-foreground transition-colors hover:bg-neon-violet/20"
+          >
+            Написать на Email
+          </a>
+        </div>
+      </div>
+    </section>
   );
 }
 
