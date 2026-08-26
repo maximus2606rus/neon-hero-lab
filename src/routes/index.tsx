@@ -84,7 +84,7 @@ function Index() {
         </a>
       </header>
 
-      <main className="relative mx-auto grid max-w-7xl items-center gap-14 px-5 pb-20 pt-8 sm:px-8 lg:grid-cols-[1.05fr_1fr] lg:gap-8 lg:pt-16">
+      <main className="relative mx-auto grid max-w-7xl items-center gap-14 px-5 pb-6 pt-8 sm:px-8 md:pb-10 lg:grid-cols-[1.05fr_1fr] lg:gap-8 lg:pt-16">
         <section className="min-w-0">
           <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-4 py-1.5 text-[11px] font-medium uppercase tracking-[0.18em] text-muted-foreground backdrop-blur">
             <span className="h-2 w-2 rounded-full bg-neon-violet shadow-glow-violet" />
@@ -145,7 +145,7 @@ function Index() {
 
 function CTABlock() {
   return (
-    <section id="contact" className="relative mx-auto max-w-7xl px-5 py-20 sm:px-8">
+    <section id="contact" className="relative mx-auto max-w-7xl px-5 py-6 sm:px-8 md:py-10">
       <div className="rounded-3xl border border-border bg-card/60 p-8 text-center shadow-glow-violet backdrop-blur sm:p-12">
         <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
           Давайте создадим AI-продукт
@@ -194,7 +194,7 @@ function FeaturedProjects() {
   ];
 
   return (
-    <section id="projects" className="relative mx-auto max-w-7xl px-5 py-20 sm:px-8">
+    <section id="projects" className="relative mx-auto max-w-7xl px-5 py-6 sm:px-8 md:py-10">
       <div className="mb-10 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
         <div className="min-w-0">
           <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-4 py-1.5 text-[11px] font-medium uppercase tracking-[0.18em] text-muted-foreground backdrop-blur">
@@ -266,7 +266,7 @@ function WhatIDo() {
   ];
 
   return (
-    <section id="services" className="relative mx-auto max-w-7xl px-5 py-20 sm:px-8">
+    <section id="services" className="relative mx-auto max-w-7xl px-5 py-6 sm:px-8 md:py-10">
       <div className="text-center">
         <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-4 py-1.5 text-[11px] font-medium uppercase tracking-[0.18em] text-muted-foreground backdrop-blur">
           <span className="h-2 w-2 rounded-full bg-neon-violet shadow-glow-violet" />
@@ -322,7 +322,7 @@ function HowIWork() {
   ];
 
   return (
-    <section id="process" className="relative mx-auto max-w-7xl px-5 py-20 sm:px-8">
+    <section id="process" className="relative mx-auto max-w-7xl px-5 py-6 sm:px-8 md:py-10">
       <div className="mb-10 text-center">
         <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-4 py-1.5 text-[11px] font-medium uppercase tracking-[0.18em] text-muted-foreground backdrop-blur">
           <span className="h-2 w-2 rounded-full bg-neon-mint" />
