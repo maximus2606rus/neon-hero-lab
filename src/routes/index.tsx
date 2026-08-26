@@ -1,5 +1,18 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowRight, BarChart3, Home, MessageSquare, Settings, Users, Wallet } from "lucide-react";
+import {
+  ArrowRight,
+  ArrowUpRight,
+  BarChart3,
+  Bot,
+  Code2,
+  Home,
+  Layers,
+  MessageSquare,
+  Settings,
+  Users,
+  Wallet,
+  Zap,
+} from "lucide-react";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -122,6 +135,9 @@ function Index() {
         <DashboardMockup />
       </main>
 
+      <FeaturedProjects />
+      <WhatIDo />
+      <HowIWork />
       <CTABlock />
     </div>
   );
@@ -129,7 +145,7 @@ function Index() {
 
 function CTABlock() {
   return (
-    <section className="relative mx-auto max-w-7xl px-5 py-20 sm:px-8">
+    <section id="contact" className="relative mx-auto max-w-7xl px-5 py-20 sm:px-8">
       <div className="rounded-3xl border border-border bg-card/60 p-8 text-center shadow-glow-violet backdrop-blur sm:p-12">
         <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
           Давайте создадим AI-продукт
@@ -153,6 +169,179 @@ function CTABlock() {
             Написать на Email
           </a>
         </div>
+      </div>
+    </section>
+  );
+}
+
+function FeaturedProjects() {
+  const projects = [
+    {
+      title: "AI-лендинг для SaaS",
+      desc: "Продающий лендинг с демо-формой, интеграцией CRM и AI-ассистентом на странице.",
+      tags: ["Next.js", "OpenAI", "Tailwind"],
+    },
+    {
+      title: "Дашборд аналитики",
+      desc: "Визуализация метрик в реальном времени, импорт данных и автоматические AI-инсайты.",
+      tags: ["React", "Supabase", "Recharts"],
+    },
+    {
+      title: "Telegram-бот автоматизации",
+      desc: "Бот для сбора заявок, рассылок уведомлений и синхронизации с Google Таблицами.",
+      tags: ["Node.js", "Telegram API", "AI"],
+    },
+  ];
+
+  return (
+    <section id="projects" className="relative mx-auto max-w-7xl px-5 py-20 sm:px-8">
+      <div className="mb-10 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+        <div className="min-w-0">
+          <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-4 py-1.5 text-[11px] font-medium uppercase tracking-[0.18em] text-muted-foreground backdrop-blur">
+            <span className="h-2 w-2 rounded-full bg-neon-orange shadow-glow-orange" />
+            Портфолио
+          </span>
+          <h2 className="mt-3 text-2xl font-bold tracking-tight sm:text-3xl">Избранные проекты</h2>
+        </div>
+        <a
+          href="#contact"
+          className="inline-flex h-11 shrink-0 items-center justify-center rounded-full border border-neon-violet/60 bg-neon-violet/10 px-5 text-sm font-semibold text-foreground transition-colors hover:bg-neon-violet/20"
+        >
+          Обсудить проект
+        </a>
+      </div>
+
+      <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        {projects.map((project) => (
+          <div
+            key={project.title}
+            className="group flex min-w-0 flex-col rounded-2xl border border-border bg-card/50 p-5 backdrop-blur transition-transform hover:scale-[1.02]"
+          >
+            <div className="mb-4 flex items-center justify-between">
+              <span className="grid h-10 w-10 place-items-center rounded-xl bg-gradient-neon shadow-glow-violet">
+                <ArrowUpRight className="h-5 w-5 text-foreground" />
+              </span>
+            </div>
+            <h3 className="text-lg font-semibold">{project.title}</h3>
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{project.desc}</p>
+            <div className="mt-auto flex flex-wrap gap-2 pt-4">
+              {project.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="rounded-full border border-border bg-background/40 px-2.5 py-1 text-[10px] text-muted-foreground"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function WhatIDo() {
+  const services = [
+    {
+      icon: Zap,
+      title: "MVP под ключ",
+      desc: "От идеи до работающего продукта за дни, а не месяцы — с фокусом на ценность для пользователя.",
+    },
+    {
+      icon: Code2,
+      title: "Лендинги и веб-приложения",
+      desc: "Быстрая вёрстка, плавные анимации и надёжная интеграция с бэкендом и API.",
+    },
+    {
+      icon: Bot,
+      title: "AI-интеграции",
+      desc: "Подключаю LLM, чат-ботов, генерацию контента и умную автоматизацию рабочих процессов.",
+    },
+    {
+      icon: Layers,
+      title: "Автоматизации",
+      desc: "Связываю сервисы между собой, убираю рутину и ускоряю повторяющиеся задачи.",
+    },
+  ];
+
+  return (
+    <section id="services" className="relative mx-auto max-w-7xl px-5 py-20 sm:px-8">
+      <div className="text-center">
+        <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-4 py-1.5 text-[11px] font-medium uppercase tracking-[0.18em] text-muted-foreground backdrop-blur">
+          <span className="h-2 w-2 rounded-full bg-neon-violet shadow-glow-violet" />
+          Услуги
+        </span>
+        <h2 className="mt-3 text-2xl font-bold tracking-tight sm:text-3xl">Что я делаю</h2>
+        <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+          Помогаю запускать цифровые продукты быстро и с минимальными издержками — от идеи до
+          первых пользователей.
+        </p>
+      </div>
+
+      <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        {services.map(({ icon: Icon, title, desc }) => (
+          <div
+            key={title}
+            className="min-w-0 rounded-2xl border border-border bg-card/50 p-5 backdrop-blur"
+          >
+            <span className="grid h-10 w-10 place-items-center rounded-xl bg-neon-violet/10">
+              <Icon className="h-5 w-5 text-neon-violet" />
+            </span>
+            <h3 className="mt-4 text-base font-semibold">{title}</h3>
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{desc}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function HowIWork() {
+  const steps = [
+    {
+      num: "01",
+      title: "Обсуждение",
+      desc: "Уточняю цели, аудиторию и ограничения проекта, чтобы выбрать правильный фокус.",
+    },
+    {
+      num: "02",
+      title: "Прототип",
+      desc: "Создаю структуру и визуальную концепцию для быстрой проверки гипотезы.",
+    },
+    {
+      num: "03",
+      title: "Разработка",
+      desc: "Вайбкодинг + ручная доводка: фронтенд, бэкенд и все нужные интеграции.",
+    },
+    {
+      num: "04",
+      title: "Запуск",
+      desc: "Деплой, тестирование и передача результата с инструкциями по поддержке.",
+    },
+  ];
+
+  return (
+    <section id="process" className="relative mx-auto max-w-7xl px-5 py-20 sm:px-8">
+      <div className="mb-10 text-center">
+        <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-4 py-1.5 text-[11px] font-medium uppercase tracking-[0.18em] text-muted-foreground backdrop-blur">
+          <span className="h-2 w-2 rounded-full bg-neon-mint" />
+          Процесс
+        </span>
+        <h2 className="mt-3 text-2xl font-bold tracking-tight sm:text-3xl">Как я работаю</h2>
+      </div>
+
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        {steps.map((step) => (
+          <div
+            key={step.num}
+            className="relative min-w-0 rounded-2xl border border-border bg-card/50 p-5 backdrop-blur"
+          >
+            <span className="text-3xl font-bold text-neon-violet/30">{step.num}</span>
+            <h3 className="mt-3 text-base font-semibold">{step.title}</h3>
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{step.desc}</p>
+          </div>
+        ))}
       </div>
     </section>
   );
