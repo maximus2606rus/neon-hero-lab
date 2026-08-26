@@ -84,69 +84,71 @@ function Index() {
         </a>
       </header>
 
-      <main className="relative mx-auto grid max-w-7xl items-center gap-14 px-5 pb-6 pt-8 sm:px-8 md:pb-10 lg:grid-cols-[1.05fr_1fr] lg:gap-8 lg:pt-16">
-        <section className="min-w-0">
-          <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-4 py-1.5 text-[11px] font-medium uppercase tracking-[0.18em] text-muted-foreground backdrop-blur">
-            <span className="h-2 w-2 rounded-full bg-neon-violet shadow-glow-violet" />
-            Вайбкодинг · AI · Продукты
-          </span>
-
-          <h1 className="mt-6 text-[2.6rem] font-bold leading-[1.05] tracking-tight sm:text-6xl lg:text-[4.25rem]">
-            Создаю AI-продукты
-            <span className="mt-1 block bg-gradient-neon bg-clip-text text-transparent">
-              через вайбкодинг
+      <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
+        <main className="relative grid items-start gap-8 overflow-hidden pb-6 pt-5 sm:gap-10 md:pb-10 lg:grid-cols-[minmax(0,1.35fr)_minmax(0,1fr)] lg:gap-6 lg:pt-8">
+          <section className="min-w-0">
+            <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-4 py-1.5 text-[11px] font-medium uppercase tracking-[0.18em] text-muted-foreground backdrop-blur">
+              <span className="h-2 w-2 rounded-full bg-neon-violet shadow-glow-violet" />
+              Вайбкодинг · AI · Продукты
             </span>
-          </h1>
 
-          <p className="mt-5 max-w-md text-base leading-relaxed text-muted-foreground sm:text-lg">
-            Быстро собираю MVP — лендинги, веб-приложения и автоматизации с помощью AI и современных
-            инструментов.
-          </p>
+            <h1 className="mt-5 text-[2.6rem] font-bold leading-[1.05] tracking-tight sm:text-6xl lg:text-[4.25rem]">
+              Создаю AI-продукты
+              <span className="mt-1 block bg-gradient-neon bg-clip-text text-transparent">
+                через вайбкодинг
+              </span>
+            </h1>
 
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
-            <a
-              href="#projects"
-              className="inline-flex h-13 min-h-12 items-center justify-center gap-2 rounded-full bg-gradient-ember px-6 text-sm font-semibold text-foreground shadow-glow-orange transition-transform hover:scale-[1.03]"
-            >
-              Посмотреть проекты
-              <ArrowRight className="h-4 w-4" />
-            </a>
-            <a
-              href="#contact"
-              className="inline-flex h-13 min-h-12 items-center justify-center rounded-full border border-neon-violet/60 bg-neon-violet/10 px-6 text-sm font-semibold text-foreground transition-colors hover:bg-neon-violet/20"
-            >
-              Связаться
-            </a>
-          </div>
+            <p className="mt-4 max-w-md text-base leading-relaxed text-muted-foreground sm:text-lg">
+              Быстро собираю MVP — лендинги, веб-приложения и автоматизации с помощью AI и современных
+              инструментов.
+            </p>
 
-          <dl className="mt-10 grid grid-cols-2 gap-x-4 gap-y-5 rounded-2xl border border-border bg-card/50 p-5 backdrop-blur sm:grid-cols-4">
-            {STATS.map((stat) => (
-              <div key={stat.label} className="min-w-0">
-                <dt className="sr-only">{stat.label}</dt>
-                <dd className="text-xl font-bold text-neon-violet sm:text-2xl">{stat.value}</dd>
-                <dd className="mt-1 text-[11px] leading-tight text-muted-foreground">
-                  {stat.label}
-                </dd>
-              </div>
-            ))}
-          </dl>
-        </section>
+            <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center">
+              <a
+                href="#projects"
+                className="inline-flex h-13 min-h-12 items-center justify-center gap-2 rounded-full bg-gradient-ember px-6 text-sm font-semibold text-foreground shadow-glow-orange transition-transform hover:scale-[1.03]"
+              >
+                Посмотреть проекты
+                <ArrowRight className="h-4 w-4" />
+              </a>
+              <a
+                href="#contact"
+                className="inline-flex h-13 min-h-12 items-center justify-center rounded-full border border-neon-violet/60 bg-neon-violet/10 px-6 text-sm font-semibold text-foreground transition-colors hover:bg-neon-violet/20"
+              >
+                Связаться
+              </a>
+            </div>
 
-        <DashboardMockup />
-      </main>
+            <dl className="mt-8 grid grid-cols-2 gap-x-4 gap-y-5 rounded-2xl border border-border bg-card/50 p-5 backdrop-blur sm:grid-cols-4">
+              {STATS.map((stat) => (
+                <div key={stat.label} className="min-w-0">
+                  <dt className="sr-only">{stat.label}</dt>
+                  <dd className="text-xl font-bold text-neon-violet sm:text-2xl">{stat.value}</dd>
+                  <dd className="mt-1 text-[11px] leading-tight text-muted-foreground">
+                    {stat.label}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+          </section>
 
-      <FeaturedProjects />
-      <WhatIDo />
-      <HowIWork />
-      <CTABlock />
+          <DashboardMockup />
+        </main>
+
+        <FeaturedProjects />
+        <WhatIDo />
+        <HowIWork />
+        <CTABlock />
+      </div>
     </div>
   );
 }
 
 function CTABlock() {
   return (
-    <section id="contact" className="relative mx-auto max-w-7xl px-5 py-6 sm:px-8 md:py-10">
-      <div className="rounded-3xl border border-border bg-card/60 p-8 text-center shadow-glow-violet backdrop-blur sm:p-12">
+    <section id="contact" className="py-6 md:py-10">
+      <div className="rounded-3xl border border-border bg-card/60 p-6 text-center shadow-glow-violet backdrop-blur sm:p-10">
         <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
           Давайте создадим AI-продукт
         </h2>
@@ -194,8 +196,8 @@ function FeaturedProjects() {
   ];
 
   return (
-    <section id="projects" className="relative mx-auto max-w-7xl px-5 py-6 sm:px-8 md:py-10">
-      <div className="mb-10 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+    <section id="projects" className="py-6 md:py-10">
+      <div className="mb-8 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
         <div className="min-w-0">
           <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-4 py-1.5 text-[11px] font-medium uppercase tracking-[0.18em] text-muted-foreground backdrop-blur">
             <span className="h-2 w-2 rounded-full bg-neon-orange shadow-glow-orange" />
@@ -266,7 +268,7 @@ function WhatIDo() {
   ];
 
   return (
-    <section id="services" className="relative mx-auto max-w-7xl px-5 py-6 sm:px-8 md:py-10">
+    <section id="services" className="py-6 md:py-10">
       <div className="text-center">
         <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-4 py-1.5 text-[11px] font-medium uppercase tracking-[0.18em] text-muted-foreground backdrop-blur">
           <span className="h-2 w-2 rounded-full bg-neon-violet shadow-glow-violet" />
@@ -279,7 +281,7 @@ function WhatIDo() {
         </p>
       </div>
 
-      <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {services.map(({ icon: Icon, title, desc }) => (
           <div
             key={title}
@@ -322,8 +324,8 @@ function HowIWork() {
   ];
 
   return (
-    <section id="process" className="relative mx-auto max-w-7xl px-5 py-6 sm:px-8 md:py-10">
-      <div className="mb-10 text-center">
+    <section id="process" className="py-6 md:py-10">
+      <div className="mb-8 text-center">
         <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-4 py-1.5 text-[11px] font-medium uppercase tracking-[0.18em] text-muted-foreground backdrop-blur">
           <span className="h-2 w-2 rounded-full bg-neon-mint" />
           Процесс
@@ -349,8 +351,8 @@ function HowIWork() {
 
 function DashboardMockup() {
   return (
-    <div className="min-w-0 lg:[perspective:1400px]">
-      <div className="overflow-hidden rounded-2xl border border-border bg-card/70 shadow-glow-violet backdrop-blur lg:[transform:rotateY(-14deg)_rotateX(6deg)]">
+    <div className="min-w-0 lg:scale-[0.95] lg:[perspective:1500px]">
+      <div className="overflow-hidden rounded-2xl border border-border bg-card/70 shadow-glow-violet backdrop-blur lg:[transform:rotateY(-10deg)_rotateX(4deg)]">
         <div className="grid grid-cols-[auto_minmax(0,1fr)]">
           <aside className="hidden w-40 flex-col gap-1 border-r border-border p-4 sm:flex">
             <div className="mb-4 flex items-center gap-2">
