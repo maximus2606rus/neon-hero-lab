@@ -79,7 +79,7 @@ function Index() {
           </span>
 
           <h1 className="mt-6 text-[2.6rem] font-bold leading-[1.05] tracking-tight sm:text-6xl lg:text-[4.25rem]">
-            Создаю АИ
+            Создаю AI-продукты
             <span className="mt-1 block bg-gradient-neon bg-clip-text text-transparent">
               через вайбкодинг
             </span>
